@@ -1,0 +1,91 @@
+@import "mixins.scss";
+
+
+.main-section{
+
+  .main-section-wrapper{
+    position: absolute;
+    left: 33.8em;
+    top: 13.4em;
+
+    .announcement{
+      position: relative;
+      left: 11.5em;
+      top: 0.4em;
+    }
+
+    .clock-wrapper{
+      position: relative;
+      display: flex;
+      left: 9.5em;
+      top: 2.5em;
+      gap: 1.5em;
+
+      .clock{
+        @include clock();
+      }
+
+      .clock:nth-child(3){
+        margin-left: 0.16em;
+      }
+
+      .clock:nth-child(4){
+        margin-left: 0.16em;
+      }
+
+      .clock:nth-child(5){
+        margin-left: 0.13em;
+      }
+
+      .clock:nth-child(6){
+        margin-left: 0.13em;
+      }
+
+      .clock:nth-child(7){
+        margin-left: -0.06em;
+      }
+    }
+
+    .clock-description{
+      position: relative;
+      display: flex;
+      left: 7.7em;
+      top: 2.75em;
+      gap: 1.2em;
+    }
+
+    .clock-description__div{
+      width: 8.25em;
+      height: 3.25em;
+      background-image: url('../assets/IMG/clock-vector.png');
+      background-size: cover;
+
+      .time-units{
+        position: relative;
+        @include clockDescription();
+        color: #FFFFFF;
+        left: 3.1em;
+        top: 1.1em;
+      }
+
+      .mins{
+        left: 2.6em;
+      }
+
+      .secs{
+        left: 2.3em;
+      }
+
+    }
+  }
+}
+
+.caption{
+  @include caption();
+}
+
+.announcement{
+  @include font();
+  width: 423px;
+  text-align: center;
+}

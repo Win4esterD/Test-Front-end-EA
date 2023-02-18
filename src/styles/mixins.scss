@@ -1,0 +1,35 @@
+@mixin font(){
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+@mixin caption(){
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 104%;
+  text-transform: uppercase;
+  color: #162C4E;
+  opacity: 0.39;
+}
+
+@mixin clock(){
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 100%;
+  color: #162C4E;
+}
+
+@mixin clockDescription(){
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+}

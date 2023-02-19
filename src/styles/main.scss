@@ -206,28 +206,59 @@
   .main-section .main-section-wrapper .announcement{
     font-size: 1em;
     width: 61.9%;
+    left: 8em;
+    top: 1.3em;
+  }
+
+  .main-section .main-section-wrapper .clock-wrapper{
+    left: 6.3em;
+    top: 3.8em;
   }
 
   .main-section .main-section-wrapper .clock-wrapper .clock{
     font-size: 2.25em;
   }
 
+  .main-section .main-section-wrapper .clock-description{
+    left: 5.6em;
+    top: 4em;
+    gap: 2.2em
+  }
+
   .main-section .main-section-wrapper .clock-description__div{
-    background-size: cover;
-    width: 64px;
+    background-image: url('../assets/IMG/time-desc-vector768.svg');
+    width: 4em;
     height: 40px;
   }
 
   .main-section .main-section-wrapper .clock-description__div .time-units{
     font-size: 12px;
+    left: 2.1em;
   }
+
+  .main-section .main-section-wrapper .clock-description__div .mins{
+    left: 1.7em;
+  }
+
+  .check-wrapper{
+    width: 66%;
+    left: 7.4em;
+    top: 6.5em;
+  }
+
 
   .check-wrapper .call-to-action{
     font-size: 1em;
   }
 
-  .check-wrapper .go-to-event-btn .btn-text{
-    font-size: 1em;
+  .check-wrapper .go-to-event-btn{
+    top: 1.2em;
+    left: 2.4em;
   }
+
+  .check-wrapper .go-to-event-btn .btn-text{
+    left: -0.65em;
+  }
+
 }
 

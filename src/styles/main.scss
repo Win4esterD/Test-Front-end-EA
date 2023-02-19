@@ -10,8 +10,11 @@
 
     .announcement{
       position: relative;
-      left: 11.5em;
+      left: 10.3em;
       top: 0.4em;
+      @include font();
+      width: 55.9%;
+      text-align: center;
     }
 
     .clock-wrapper{
@@ -20,6 +23,7 @@
       left: 9.5em;
       top: 2.5em;
       gap: 1.5em;
+      width: 66%;
 
       .clock{
         @include clock();
@@ -52,6 +56,7 @@
       left: 7.7em;
       top: 2.75em;
       gap: 1.2em;
+      width: 70%;
     }
 
     .clock-description__div{
@@ -75,7 +80,6 @@
       .secs{
         left: 2.3em;
       }
-
     }
   }
 }
@@ -84,8 +88,146 @@
   @include caption();
 }
 
-.announcement{
-  @include font();
-  width: 423px;
-  text-align: center;
+
+.check-wrapper{
+  position: relative;
+  top: 7em;
+  left: 15.5em;
+  width: 60%;
+  
+  .call-to-action{
+    @include font();
+    position: relative;
+    top: 0.2em;
+    left: 0.1em;
+  }
+
+  .go-to-event-btn{
+    @include button();
+    position: relative;
+    top: 1em;
+    left: 1em;
+    left: 3.7em;
+
+    .btn-text{
+      @include font();
+      position: relative;
+      width: 171px;
+      left: -0.5em;
+      top: 0.12em;
+    }
+
+    .btn-arrow{
+      position: relative;
+      left: 1.5em;
+      top: 0.4em;
+    }
+  }
 }
+
+
+@media(max-width: 1919px){
+
+
+  .main-section .main-section-wrapper{
+    left: 28.2vw;
+  }
+}
+
+@media(max-width: 1680px){
+
+  .main-section .main-section-wrapper{
+    left: 26.2vw;
+  }
+}
+
+@media(max-width: 1400px){
+
+  .main-section .main-section-wrapper{
+    left: 23.2vw;
+  }
+}
+
+@media(max-width: 1280px){
+
+  .main-section .main-section-wrapper{
+    left: 21.2vw;
+  }
+}
+
+
+@media(max-width: 1152px){
+  .main-section .main-section-wrapper{
+    left: 17vw;
+  }
+}
+
+@media (max-width: 1074px){
+  .main-section .main-section-wrapper{
+    left: 15vw;
+  }
+}
+
+@media (max-width: 1048px){
+  .caption{
+    position: relative;
+    font-size: 3.5em;
+    left: 8vw;
+  }
+
+  .main-section .main-section-wrapper .clock-description{
+    width: 85%;
+  }
+}
+
+@media(max-width: 1000px){
+
+  .main-section .main-section-wrapper{
+    left: 8vw;
+  }
+}
+
+@media(max-width: 800px){
+  .main-section .main-section-wrapper{
+    left: 4vw;
+  }
+}
+
+@media(max-width: 768px){
+  .main-section .main-section-wrapper{
+    left: 14.8vw;
+    top: 20.4em;
+  }
+
+  .caption{
+    font-size: 2.25em;
+  }
+
+  .main-section .main-section-wrapper .announcement{
+    font-size: 1em;
+    width: 61.9%;
+  }
+
+  .main-section .main-section-wrapper .clock-wrapper .clock{
+    font-size: 2.25em;
+  }
+
+  .main-section .main-section-wrapper .clock-description__div{
+    background-size: cover;
+    width: 64px;
+    height: 40px;
+  }
+
+  .main-section .main-section-wrapper .clock-description__div .time-units{
+    font-size: 12px;
+  }
+
+  .check-wrapper .call-to-action{
+    font-size: 1em;
+  }
+
+  .check-wrapper .go-to-event-btn .btn-text{
+    font-size: 1em;
+  }
+}
+

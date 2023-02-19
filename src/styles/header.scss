@@ -8,3 +8,59 @@
   left: 54.1em;
   top: 3.7em;
 }
+
+
+@media(max-width: 1919px){
+  .logo{
+    left: 45.1vw;
+  }
+}
+
+@media(max-width: 1680px){
+  .logo{
+    left: 43.1vw;
+  }
+}
+
+@media(max-width: 1400px){
+  .logo{
+    left: 45.1vw;
+  }
+}
+
+@media (max-width: 1280px){
+  .logo{
+    left: 48.1vw;
+  }
+}
+
+
+@media (max-width: 1000px){
+  .vector-left{
+    width: 21em;
+  }
+
+  .vector-right{
+    width: 12em;
+  }
+
+  .logo{
+    left: 46vw;
+  }
+}
+
+
+@media (max-width: 768px){
+  .vector-left{
+    width: 15.5em;
+  }
+
+  .vector-right {
+    width: 17.5em;
+  }
+
+  .logo {
+    left: 37.6vw;
+    top: 6.3em;
+  }
+}

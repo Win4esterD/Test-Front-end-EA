@@ -1,0 +1,85 @@
+@import "mixins.scss";
+
+footer{
+  position: relative;
+  height: 12em;
+  background: #162C4E;
+  top: 21em;
+}
+
+.notification-form{
+  position: relative;
+  width: 440px;
+  height: 59px;
+  left: 38.6vw;
+  top: 3.9em;
+
+  .form-button{
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    background: #DF2224;
+    border-radius: 1.8em;
+    right: 0.8em;
+    border: none;
+    top: 0.6em;
+  }
+
+  .notification-form__input{
+    @include input();
+    font-family: 'Roboto';
+  }
+  
+  .notification-form__input::placeholder{
+    @include font();
+    font-family: 'Roboto';
+    position: relative;
+    left: 1.41em;
+  }
+  
+  .notification-form__input:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+  
+  .notification-form__input:focus::-moz-placeholder {
+    color: transparent;
+  }
+  
+  .notification-form__input:focus:-moz-placeholder {
+    color: transparent;
+  }
+  
+  .notification-form__input:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+  
+  .notification-form__input:focus{
+    @include font();
+  }
+}
+
+
+@media (max-width: 1152px){
+  .notification-form {
+    left: 32.6vw;
+  }
+}
+
+@media(max-width: 1000px){
+  footer{
+    top: 29em;
+  }
+}
+
+@media(max-width: 768px){
+  .notification-form{
+    width: 360px;
+    height: 41px; 
+
+    .form-button{
+      width: 33px;
+      height: 33px;
+    }
+  }
+
+}

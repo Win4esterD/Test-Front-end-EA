@@ -93,6 +93,39 @@ footer{
         top: 0.3em;
       }
   }
+}
 
+@media (max-width: 596px){
+  .notification-form{
+    left: 18vw;
+  }
+}
 
+@media (max-width: 505px){
+  .notification-form{
+    left: 7vw;
+  }
+}
+
+@media(max-width: 397px){
+  .notification-form {
+    left: 2vw;
+  }
+}
+
+@media(max-width: 379px){
+  .notification-form{
+    width: 280px;
+  }
+}
+
+@media(max-width: 360px){
+  footer{
+    top: 32.5em;
+  }
+
+  .notification-form{
+    top: 3em;
+    left: 11vw;
+  }
 }

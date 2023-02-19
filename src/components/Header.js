@@ -6,6 +6,8 @@ class Header extends React.Component{
   state = {
       width: 0,
     };
+
+  imageFolder = "./assets/IMG/";
   
   updateDimensions = () => {
     this.setState({ 
@@ -24,17 +26,21 @@ class Header extends React.Component{
 
   leftVectorChanger(){
     if(this.state.width > 768){
-      return './assets/IMG/Vector-left.png';
-    }else if(this.state.width <= 768 && this.state.width > 360){
-      return "./assets/IMG/Vector-left768.png";
+      return `${this.imageFolder}Vector-left.png`;
+    }else if(this.state.width <= 768 && this.state.width > 495){
+      return `${this.imageFolder}Vector-left768.png`;
+    }else if(this.state.width <= 495){
+      return `${this.imageFolder}Vector-left360.png`
     }
   }
 
   rightVectorChange(){
     if(this.state.width > 768){
-      return './assets/IMG/Vector-right.png';
-    }else if(this.state.width <= 768 && this.state.width > 360){
-      return "./assets/IMG/Vector-right768.png";
+      return `${this.imageFolder}Vector-right.png`;
+    }else if(this.state.width <= 768 && this.state.width > 495){
+      return `${this.imageFolder}Vector-right768.png`;
+    }else if(this.state.width <= 495){
+      return `${this.imageFolder}Vector-right360.png`
     }
   }
 

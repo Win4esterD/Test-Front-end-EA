@@ -64,3 +64,38 @@
     top: 6.3em;
   }
 }
+
+@media (max-width: 596px){
+  .logo{
+    left: 26.6vw;
+  }
+}
+
+@media(max-width: 495px){
+  .vector-right {
+    width: 14.5em;
+  }
+
+  .vector-left {
+    width: 14.5em;
+  }
+}
+
+@media(max-width: 413px){
+  .vector-right {
+    width: 11.5em;
+  }
+
+  .vector-left {
+    width: 11.5em;
+  }
+}
+
+@media(max-width: 360px){
+  .logo{
+    width: 8em;
+    height: 2.5em;
+    top: 5em;
+    left: 7.32em;
+  }
+}

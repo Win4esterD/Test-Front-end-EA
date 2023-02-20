@@ -49,7 +49,7 @@ class Header extends React.Component{
       <div>
         <img className="vector-left" src={this.leftVectorChanger()} alt="Left Vector"></img>
         <img className="vector-right" src={this.rightVectorChange()} alt="Right Vector"></img>
-        <img className="logo" src="./assets/IMG/Group.svg" alt="logo"></img>
+        <a href="index.html"><img className="logo" src="./assets/IMG/Group.svg" alt="logo"></img></a>
       </div>
     )
   }

@@ -28,14 +28,15 @@ footer{
   .notification-form__input{
     @include input();
     font-family: 'Roboto';
+    padding-left: 1.9em;
   }
   
   .notification-form__input::placeholder{
     @include font();
     font-family: 'Roboto';
     position: relative;
-    left: 1.41em;
   }
+
   
   .notification-form__input:focus::-webkit-input-placeholder {
     color: transparent;
@@ -86,11 +87,19 @@ footer{
         font-size: 14px;
       }
 
+      .notification-form__input{
+        padding-left: 1.45em;
+      }
+
       .form-button{
         width: 33px;
         height: 33px;
         right: 0.3em;
         top: 0.3em;
+      }
+
+      .form-button:hover{
+        cursor: pointer;
       }
   }
 }

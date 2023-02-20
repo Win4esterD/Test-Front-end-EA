@@ -1,0 +1,119 @@
+@import "mixins.scss";
+
+.popup-bg{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgba(22, 44, 78, 0.6);
+  z-index: 1;
+  display: none;
+}
+
+.popup{
+  position: absolute;
+  width: 20em;
+  height: 23.125em;
+  background: #ffffff;
+  border: 1px solid rgba(19, 89, 120, 0.07);
+  border-radius: 2px;
+  left: 50em;
+  top: 18em;
+}
+
+.cross{
+  position: relative;
+  left: 16.4em;
+  top: 0.5em;
+  cursor: pointer;
+}
+
+.messages-wrapper{
+  position: relative;
+  left: 4.3em;
+  top: 2.3em;
+}
+
+.message-header{
+  @include caption();
+  margin-top: 1em;
+  left: 1.92em;
+  position: relative;
+  font-size: 36px;
+  opacity: 1;
+}
+
+.message-body{
+  @include font();
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  width: 90%;
+  top: 2em;
+  left: 1.2em;
+}
+
+.popup-btn{
+  @include button();
+  width: 12.5rem;
+  position: relative;
+  top: 4.4em;
+  left: 4.7em;
+}
+
+.popup-btn-text{
+  @include font();
+}
+
+@media(max-width: 1813px){
+  .popup{
+    left: 45vw;
+  }
+}
+
+@media(max-width: 1460px){
+  .popup{
+    left: 43vw;
+  }
+}
+
+@media(max-width: 768px){
+
+  .popup{
+    top: 20.5em;
+    left: 30vw;
+  }
+}
+
+@media(max-width: 557px){
+  .message-header{
+    width: 56%;
+  }
+}
+
+@media (max-width: 593px){
+  .popup{
+    top: 20.5em;
+    left: 25vw;
+  }
+}
+
+@media (max-width: 491px){
+  .popup{
+    top: 20.5em;
+    left: 17vw;
+  }
+}
+
+@media (max-width: 411px){
+  .popup{
+    top: 20.5em;
+    left: 8vw;
+  }
+}
+
+@media (max-width: 360px){
+  .popup{
+    top: 13.7em;
+    left: 5.3vw;
+  }
+}

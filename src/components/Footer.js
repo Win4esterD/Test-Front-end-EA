@@ -8,20 +8,44 @@ class Footer extends React.Component{
     this.formHandler = this.formHandler.bind(this);
   }
 
+  requestSent(popUpSelector, messageHeaderSelector, messageBodySelector){
+    popUpSelector.style.display = 'block';
+    messageHeaderSelector.innerHTML = "SUCCESS!";
+    messageHeaderSelector.style.color = "#162C4E";
+    messageBodySelector.innerHTML = "You have successfully subscribed to the email newsletter";
+  }
+
+  requestFailed(popUpSelector, messageHeaderSelector, messageBodySelector, err){
+    popUpSelector.style.display = 'block';
+    messageHeaderSelector.innerHTML = "ERROR!";
+    messageHeaderSelector.style.color = "red";
+    messageBodySelector.innerHTML = `${err}`;
+  }
+
   async formHandler(event){
     event.preventDefault()
     
     const input = document.querySelector(".notification-form__input");
     const server = window.location.href;
+    // const server = "https://localhost:4200/";
 
     try{
-      let response =  await fetch(server, {
+      await fetch(server, {
         headers: {
           email: input.value
         }
       });
+
+      const popUpSelector = document.querySelector('.popup-bg');
+      const messageHeaderSelector = document.querySelector('.message-header');
+      const messageBody = document.querySelector('.message-body');
+      this.requestSent(popUpSelector, messageHeaderSelector, messageBody);
+
     }catch(err){
-      console.log(err);
+      const popUpSelector = document.querySelector('.popup-bg');
+      const messageHeaderSelector = document.querySelector('.message-header');
+      const messageBodySelector = document.querySelector('.message-body');
+      this.requestFailed(popUpSelector, messageHeaderSelector, messageBodySelector, err)
     }
 
   }

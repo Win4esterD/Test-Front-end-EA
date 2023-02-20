@@ -1,4 +1,5 @@
 import React from 'react';
+import CountDown from './CountDown';
 
 class Watch extends React.Component{
 
@@ -23,15 +24,7 @@ class Watch extends React.Component{
   render(){
     return(
       <div className="watch">
-        <div className="clock-wrapper">
-            <span className="clock">92</span>
-            <span className="clock">:</span>
-            <span className="clock">11</span>
-            <span className="clock">:</span>
-            <span className="clock">41</span>
-            <span className="clock">:</span>
-            <span className="clock">48</span>
-          </div>
+          <CountDown />
           <div className="clock-description">
             <div className="clock-description__div">
               <span className="time-units days">{this.state.width > 768 ? "Days" : 'DD'}</span>

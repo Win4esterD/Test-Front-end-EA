@@ -8,6 +8,11 @@ class Footer extends React.Component{
     this.formHandler = this.formHandler.bind(this);
   }
 
+  componentDidMount(){
+    const footer = document.querySelector('footer');
+    this.props.animate(footer, 1.3, 20, 1800)
+  }
+
   requestSent(popUpSelector, messageHeaderSelector, messageBodySelector){
     popUpSelector.style.display = 'block';
     messageHeaderSelector.innerHTML = "SUCCESS!";
@@ -27,7 +32,6 @@ class Footer extends React.Component{
     
     const input = document.querySelector(".notification-form__input");
     const server = window.location.href;
-    // const server = "https://localhost:4200/";
 
     try{
       await fetch(server, {

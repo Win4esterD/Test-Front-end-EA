@@ -1,6 +1,10 @@
 import React from 'react';
 
 class Check extends React.Component{
+  componentDidMount(){
+    const checkWrapper = document.querySelector('.check-wrapper');
+    this.props.animate(checkWrapper, 1, 10, 1800)
+  }
   render(){
     return (
       <div className="check-wrapper">

@@ -1,6 +1,13 @@
+.vector-left{
+  position: relative;
+  left: -28em;
+  transition: all 1s;
+}
+
 .vector-right{
   position: absolute;
-  right: 0em;
+  transition: all 1s;
+  top: -28em;
 }
 
 .logo{

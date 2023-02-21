@@ -8,6 +8,12 @@ class Header extends React.Component{
     };
 
   imageFolder = "./assets/IMG/";
+
+  constructor(props){
+    super(props)
+    this.animateLeftVector = this.animateLeftVector.bind(this);
+    this.animateRightVector = this.animateRightVector.bind(this);
+  }
   
   updateDimensions = () => {
     this.setState({ 
@@ -18,7 +24,10 @@ class Header extends React.Component{
   componentDidMount() {
     window.addEventListener('load', this.updateDimensions);
     window.addEventListener('resize', this.updateDimensions);
+    const logo = document.querySelector('.logo');
+    this.props.animate(logo, 1.3, 15, 300);
   }
+
   componentWillUnmount() {
     window.removeEventListener('load', this.updateDimensions);
     window.removeEventListener('resize', this.updateDimensions);
@@ -43,12 +52,25 @@ class Header extends React.Component{
       return `${this.imageFolder}Vector-right360.png`
     }
   }
+  
+  
+  animateLeftVector(){
+    const leftVector = document.querySelector('.vector-left');
+    leftVector.style.left = '0em';
+  }
+
+  animateRightVector(){
+    const rightVector = document.querySelector('.vector-right');
+    rightVector.style.right = '0em';
+    rightVector.style.top = '0em';
+  }
+
 
   render(){
     return (
-      <div>
-        <img className="vector-left" src={this.leftVectorChanger()} alt="Left Vector"></img>
-        <img className="vector-right" src={this.rightVectorChange()} alt="Right Vector"></img>
+      <div className="head-element">
+        <img className="vector-left" onLoad={this.animateLeftVector} src={this.leftVectorChanger()} alt="Left Vector"></img>
+        <img className="vector-right" onLoad={this.animateRightVector}  src={this.rightVectorChange()} alt="Right Vector"></img>
         <a href="index.html"><img className="logo" src="./assets/IMG/Group.svg" alt="logo"></img></a>
       </div>
     )

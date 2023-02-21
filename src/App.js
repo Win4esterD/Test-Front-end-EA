@@ -16,7 +16,6 @@ class App extends React.Component{
     const topBasicStyle = styles.top;
     element.style.top = `${parseInt(topBasicStyle) - upShift}px`;
     element.style.opacity = '0';
-    console.log(element);
 
     setTimeout(() => {
       element.style.transition = `${duration}s`

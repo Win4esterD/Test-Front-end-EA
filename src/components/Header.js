@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 class Header extends React.Component{
   state = {
-      width: 0,
+      width: window.innerWidth,
     };
 
   imageFolder = "./assets/IMG/";
@@ -13,6 +13,7 @@ class Header extends React.Component{
     super(props)
     this.animateLeftVector = this.animateLeftVector.bind(this);
     this.animateRightVector = this.animateRightVector.bind(this);
+    this.leftVectorChange = this.leftVectorChange.bind(this);
   }
   
   updateDimensions = () => {
@@ -33,7 +34,7 @@ class Header extends React.Component{
     window.removeEventListener('resize', this.updateDimensions);
   }
 
-  leftVectorChanger(){
+  leftVectorChange(){
     if(this.state.width > 768){
       return `${this.imageFolder}Vector-left.png`;
     }else if(this.state.width <= 768 && this.state.width > 495){
@@ -69,8 +70,8 @@ class Header extends React.Component{
   render(){
     return (
       <div className="head-element">
-        <img className="vector-left" onLoad={this.animateLeftVector} src={this.leftVectorChanger()} alt="Left Vector"></img>
-        <img className="vector-right" onLoad={this.animateRightVector}  src={this.rightVectorChange()} alt="Right Vector"></img>
+        <div><img className="vector-left" onLoad={this.animateLeftVector} src={this.leftVectorChange()} alt="Left Vector"></img></div>
+        <div><img className="vector-right" onLoad={this.animateRightVector} src={this.rightVectorChange()} alt="Right Vector"></img></div>
         <a href="index.html"><img className="logo" src="./assets/IMG/Group.svg" alt="logo"></img></a>
       </div>
     )

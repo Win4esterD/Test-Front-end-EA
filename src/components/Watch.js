@@ -4,7 +4,7 @@ import CountDown from './CountDown';
 class Watch extends React.Component{
 
   state = {
-    width: 0
+    width: window.innerWidth
   }
 
   updateDimensions = () => {

@@ -11,6 +11,7 @@ class App extends React.Component{
     this.animateAppearance = this.animateAppearance.bind(this);
   }
 
+
   animateAppearance(element, duration, upShift, animationDelay){
     const styles = window.getComputedStyle(element);
     const topBasicStyle = styles.top;
@@ -26,11 +27,11 @@ class App extends React.Component{
 
   render(){
     return(
-      <div>
-        <PopUp />
+      <div className="application">
         <Header animate={this.animateAppearance}/>
         <Main animate={this.animateAppearance}/>
         <Footer animate={this.animateAppearance}/>
+        <PopUp />
       </div>
     )
   }

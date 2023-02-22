@@ -10,7 +10,7 @@ class Footer extends React.Component{
 
   componentDidMount(){
     const footer = document.querySelector('footer');
-    this.props.animate(footer, 1.3, 20, 1800)
+    // this.props.animate(footer, 0, 0, 1800)
   }
 
   requestSent(popUpSelector, messageHeaderSelector, messageBodySelector){

@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/defaults.scss';
+import './styles/structure.scss';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
@@ -23,6 +24,10 @@ class App extends React.Component{
       element.style.top = topBasicStyle;
       element.style.opacity = '1';
     }, animationDelay);
+
+    setTimeout(() => {
+      element.style.transition = 'none';
+    }, animationDelay * 1.6);
   }
 
   render(){

@@ -10,7 +10,20 @@ class Footer extends React.Component{
 
   componentDidMount(){
     const footer = document.querySelector('footer');
-    // this.props.animate(footer, 0, 0, 1800)
+    footer.style.opacity = "0";
+    setTimeout(() => {
+      footer.style.transition = '1s all';
+    }, 1000)
+
+    setTimeout(() => {
+      footer.style.opacity = '1';
+      footer.style.transition = '1s all';
+    }, 1900);
+
+    setTimeout(() => {
+      footer.style.transition = 'none';
+    }, 3000)
+
   }
 
   requestSent(popUpSelector, messageHeaderSelector, messageBodySelector){

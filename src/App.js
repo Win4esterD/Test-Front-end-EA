@@ -35,7 +35,7 @@ class App extends React.Component{
       <div className="application">
         <Header animate={this.animateAppearance}/>
         <Main animate={this.animateAppearance}/>
-        <Footer animate={this.animateAppearance}/>
+        <Footer/>
         <PopUp />
       </div>
     )
